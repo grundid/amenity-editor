@@ -36,6 +36,8 @@ be able to download nodes from the OSM server and see them on the map.
 If you want to be able to edit nodes, you will have to register an OAuth App on the OSM webpage 
 (http://www.openstreetmap.org/user/username/oauth_clients/new).
 Then create a new profile in you Maven settings.xml like this:
+
+
 <nowiki>
 <profile>
 	<id>osm-oauth</id>
@@ -45,6 +47,8 @@ Then create a new profile in you Maven settings.xml like this:
 	</properties>
 </profile>
 </nowiki>
+
+
 Now build the project with the osm-prd profile and the osm-oauth profile:
 
 mvn package -P osm-prd,osm-oauth
@@ -53,6 +57,8 @@ The H2 database won't be suitable for production. You can install a db of your c
 and create a schema from the src/main/resources/database.sql file.
 
 Here is an example for PostgreSQL:
+
+
 <nowiki>
 <profile>
 	<id>ae-postgresql</id>
@@ -71,6 +77,8 @@ Here is an example for PostgreSQL:
 	</dependencies>
 </profile>
 </nowiki>
+
+
 Now build the project with:
 
 mvn package -P osm-prd,osm-oauth,ae-postgresql
