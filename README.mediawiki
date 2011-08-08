@@ -34,16 +34,16 @@ This will create a WAR file which can access the production API. This means that
 be able to download nodes from the OSM server and see them on the map.
 
 If you want to be able to edit nodes, you will have to register an OAuth App on the OSM webpage 
-(http://www.openstreetmap.org/user/&lt;username&gt;/oauth_clients/new).
+(http://www.openstreetmap.org/user/username/oauth_clients/new).
 Then create a new profile in you Maven settings.xml like this:
 <nowiki>
-&lt;profile&gt;
-	&lt;id&gt;osm-oauth&lt;/id&gt;
-	&lt;properties&gt;
-		&lt;oauth.consumerKey&gt;...&lt;/oauth.consumerKey&gt;
-		&lt;oauth.consumerSecret&gt;...&lt;/oauth.consumerSecret&gt;
-	&lt;/properties&gt;
-&lt;/profile&gt;
+<profile>
+	<id>osm-oauth</id>
+	<properties>
+		<oauth.consumerKey>...</oauth.consumerKey>
+		<oauth.consumerSecret>...</oauth.consumerSecret>
+	</properties>
+</profile>
 </nowiki>
 Now build the project with the osm-prd profile and the osm-oauth profile:
 
@@ -53,24 +53,24 @@ The H2 database won't be suitable for production. You can install a db of your c
 and create a schema from the src/main/resources/database.sql file.
 
 Here is an example for PostgreSQL:
-
-&lt;profile&gt;
-	&lt;id&gt;ae-postgresql&lt;/id&gt;
-	&lt;properties&gt;
-		&lt;db.driver&gt;org.postgresql.Driver&lt;/db.driver&gt;
-		&lt;db.url&gt;jdbc:postgresql://localhost/ae&lt;/db.url&gt;
-		&lt;db.user&gt;osm&lt;/db.user&gt;
-		&lt;db.password&gt;osm&lt;/db.password&gt;
-	&lt;/properties&gt;
-	&lt;dependencies&gt;
-		&lt;dependency&gt;
-			&lt;groupId&gt;postgresql&lt;/groupId&gt;
-			&lt;artifactId&gt;postgresql&lt;/artifactId&gt;
-			&lt;version&gt;8.4-702.jdbc4&lt;/version&gt;
-		&lt;/dependency&gt;
-	&lt;/dependencies&gt;
-&lt;/profile&gt;
-
+<nowiki>
+<profile>
+	<id>ae-postgresql</id>
+	<properties>
+		<db.driver>org.postgresql.Driver</db.driver>
+		<db.url>jdbc:postgresql://localhost/ae</db.url>
+		<db.user>osm</db.user>
+		<db.password>osm</db.password>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>8.4-702.jdbc4</version>
+		</dependency>
+	</dependencies>
+</profile>
+</nowiki>
 Now build the project with:
 
 mvn package -P osm-prd,osm-oauth,ae-postgresql
