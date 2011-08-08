@@ -1,0 +1,79 @@
+== Amenity Editor for OSM ==
+
+This project contains the source code for the Amenity Editor 
+which is available online at http://ae.osmsurround.org.
+
+The Amenity Editor in written in Java. It is build using the 
+SpringFramework (http://www.springframework.org/).
+Apache Maven (http://maven.apache.org) is used as the build system.
+
+== Building ==
+
+To build the Amenity Editor launch:
+
+mvn package
+
+This will create a WAR file in the target folder with the name "amenity-editor.war".
+Place this file in the webapps folder of your 
+servlet container (http://tomcat.apache.org) and launch the server.
+
+You can then access the amenity editor with
+
+http://localhost:8080/amenity-editor
+
+The default profile will build an Amenity Editor which will use a H2 
+In-Memory Database (http://www.h2database.com) and access the Developer OSM API. 
+The database will be cleared after each restart.
+
+If you want to download some nodes, you will have to change the 
+profile settings an build the project with:
+
+mvn package -P osm-prd
+
+This will create a WAR file which can access the production API. This means that you will 
+be able to download nodes from the OSM server and see them on the map.
+
+If you want to be able to edit nodes, you will have to register an OAuth App on the OSM webpage 
+(http://www.openstreetmap.org/user/<username>/oauth_clients/new).
+Then create a new profile in you Maven settings.xml like this:
+
+<profile>
+	<id>osm-oauth</id>
+	<properties>
+		<oauth.consumerKey>...</oauth.consumerKey>
+		<oauth.consumerSecret>...</oauth.consumerSecret>
+	</properties>
+</profile>
+
+Now build the project with the osm-prd profile and the osm-oauth profile:
+
+mvn package -P osm-prd,osm-oauth
+
+The H2 database won't be suitable for production. You can install a db of your choice 
+and create a schema from the src/main/resources/database.sql file.
+
+Here is an example for PostgreSQL:
+
+<profile>
+	<id>ae-postgresql</id>
+	<properties>
+		<db.driver>org.postgresql.Driver</db.driver>
+		<db.url>jdbc:postgresql://localhost/ae</db.url>
+		<db.user>osm</db.user>
+		<db.password>osm</db.password>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>8.4-702.jdbc4</version>
+		</dependency>
+	</dependencies>
+</profile>
+
+Now build the project with:
+
+mvn package -P osm-prd,osm-oauth,ae-postgresql
+
+This gives you a full production release.
+

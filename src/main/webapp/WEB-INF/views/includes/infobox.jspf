@@ -1,0 +1,34 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" buffer="128kb" %>
+<div class="infobox" style="width:450px;text-align:left;display:none;height:500px;overflow-y:scroll;padding:10px" id="help">
+<h4>Willkomen beim Amenity Editor</h4>
+<i>Sorry, no english translation yet. Try google <a href="http://translate.google.de/translate?js=n&prev=_t&hl=de&ie=UTF-8&u=http%3A%2F%2Fae.osmsurround.org&sl=de&tl=en&history_state0=">translate</a> in the meantime.</i>
+<hr>
+Der Amenity Editor ist ein einfaches Online-Werkzeug um Knoten/Points of Interest (POIs) auf der OpenStreetMap Karte zu erstellen und zu ändern. Er soll dem Benutzer schnell die Möglichkeit geben um fehlende Informationen, wie Öffnungszeiten oder Adresse zu ergänzen.
+<p>
+<b>Datencaching</b>
+<p>
+Um die Anzeige der POIs auf der OSM Karte zu beschleunigen werden die OSM Daten in einem Cache zwischengespeichert. Dies kann manchmal zur Folge haben, dass sie nicht immer auf dem neusten Stand sind. Um dieses Problem zu lösen gibt es die Möglichkeit topaktuelle Daten vom OSM Server zu laden. Dies erfolgt mit dem Button „Daten von OSM laden“. Das Laden der Daten kann unter Umständen etwas länger dauern. Wir bitten hier einfach um etwas Geduld. Der Cache wird automatisch beim Laden der OSM Daten aktualisiert, außerdem wird regelmäßig ein neuer Abzug der OSM Daten eingespielt.<br>
+Die gecachten Daten enthalten im Moment nur Daten aus Deutschland. In allen anderen Gegenden müssen die Daten manuell mit dem "Daten von OSM laden" Button nachgeladen werden.
+<p>
+<b>Ändern von POIs</b>
+<p>
+Um ein POI zu ändern, klicke es mit der Maus an. In dem angezeigten Layer werden dann alle vorhandenen Informationen zu dem POI angezeigt. Klicke auf „Tag hinzufügen“ um einen neuen Tag hinzuzufügen oder benutze die Icons um bestimmte Sets von Tags einzufügen. Fülle danach die entsprechenden Werte ein. Durch Autovervollständigen erhältst du sinnvolle Vorschläge in Abhängigkeit vom Tag-Namen.<br>
+Um die Änderungen zu Speichern, klicke auf den Button „Speichern“.<br>
+Um ein POI zu löschen klicke einfach auf den entsprechenden Button. <br>
+Um ein POI zu verschieben klicke auf den entsprechenden Button und folge den Anweisungen auf dem Bildschirm.<br>
+<p>
+<b>Anlegen von neuen POIs</b>
+<p>
+Um neue POIs anzulegen muss der Erstellen-Modus aktiviert werden. Dies erfolgt durch den Button „Neuen Knoten erstellen“. Danach kannst auf eine beliebige Stelle klicken und es wird ein gelber Marker angelegt. Das Layer zum Einfügen der Informationen wird auch gleich angezeigt. Wähle eine Vorlage für den POI aus, oder klicke auf „Leerer Knoten“ um beliebige andere Informationen zu erfassen.
+<p>
+<b>Einstellungen</b>
+<p>
+In den Einstellungen kannst du definieren, welche Knoten angezeigt werden sollen. Außerdem kann du hier deine Home Basis angeben, die immer beim Start der Anwendung und beim Klicken auf den Button „Home Base“ angezeigt wird. 
+Darüber hinaus wird hier dein Benutzername und Passwort für den OSM Server gespeichert.<br>
+Alle Einstellungen können bei Bedarf in einem Cookie gespeichert werden um sie bei der nächsten Session wiederherzustellen.<br>
+<p>
+<input type="button" class="ae-small-button" value="Hilfe schließen" onclick="$('help').toggle();">
+<p>
+Contact: as(a t)osmsurround(d o t)org, <a href="http://betaplace.emaitie.de/" target="_blank">betaplace.emaitie.de</a>
+<p>&nbsp;<p>
+</div>

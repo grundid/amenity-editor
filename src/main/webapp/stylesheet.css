@@ -1,0 +1,187 @@
+html,body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	border: none
+}
+
+body {
+	font-family: Verdana, Arial;
+}
+
+.addMarkerBtn {
+	margin-left: 60px;
+	margin-top: 10px;
+	width: 22px;
+	height: 22px;
+	background-image: url("icon_error_add.png");
+}
+
+.editbox {
+	
+}
+
+.infobox {
+	margin-bottom: 5px;
+	border: 1px solid #cc0000;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	background-color: #FFF;
+	font-size: 10px;
+	padding: 5px;
+}
+
+div.autocomplete {
+	position: absolute;
+	width: 250px;
+	background-color: white;
+	border: 1px solid #888;
+	margin: 0;
+	padding: 0;
+	z-index: 1000000;
+	overflow-y: scroll;
+	max-height: 100px;
+}
+
+div.autocomplete ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+div.autocomplete ul li.selected {
+	background-color: #ffb;
+}
+
+div.autocomplete ul li {
+	list-style-type: none;
+	display: block;
+	margin: 0;
+	padding: 2px;
+	height: 12px;
+	cursor: pointer;
+	font-size: 10px;
+	overflow: hidden;
+}
+
+.informal {
+	font-size: 9px;
+	font-style: italic;
+}
+
+div.ae-nodedetails {
+	font-size: 10px;
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #e7e7e7;
+}
+
+div.ae-buttons-top {
+	margin-top: 5px;
+	padding-top: 5px;
+	border-top: 1px solid #e7e7e7;
+}
+
+div.ae-buttons {
+	margin-top: 5px;
+	padding-top: 5px;
+	text-align: right;
+}
+
+.ae-edit-button {
+	font-size: 10px;
+}
+
+.ae-add-tag-icon {
+	width: 16px;
+	height: 16px;
+	margin-left: 5px;
+}
+
+.ae-add-tag-icon img {
+	border: none;
+}
+
+.ae-url-icon {
+	width: 16px;
+	height: 16px;
+	margin-left: 5px;
+}
+
+.ae-url-icon img {
+	border: none;
+}
+
+.ae-closeicon {
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	width: 16px;
+	height: 16px;
+}
+
+.ae-closeicon a {
+	display: block;
+	width: 16px;
+	height: 16px;
+	background-image: url("img/close_bw.png");
+	background-repeat: no-repeat;
+}
+
+.ae-closeicon a:hover {
+	background-image: url("img/close.png");
+}
+
+div.ae-nodename {
+	font-family: Verdana;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+div.ae-keyvaluetab {
+	width: 440px;
+	height: 170px;
+	overflow-y: scroll;
+	overflow-x: hide;
+}
+
+div.ae-editarea {
+	width: 440px;
+	min-height: 100px;
+	overflow: hide;
+}
+
+a.ae-create-amenity {
+	border: 1px solid #e7e7e7;
+	font-size: 11px;
+	width: 95px;
+	margin: 0px 0px 2px 2px;
+	padding: 2px;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	float: left;
+	color: #000;
+}
+
+a.ae-create-amenity:hover {
+	background-color: #e7e7e7;
+	color: #000;
+}
+
+.ae-small-button {
+	font-size: 9px;
+}
+
+.ae-simple-text {
+	font-size: 12px;
+	margin-bottom: 5px;
+}
+
+.inputvalue {
+	width: 260px;
+}
+
+.inputkey {
+	width: 120px;
+}
