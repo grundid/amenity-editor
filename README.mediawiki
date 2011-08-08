@@ -4,8 +4,8 @@ This project contains the source code for the Amenity Editor
 which is available online at http://ae.osmsurround.org.
 
 The Amenity Editor in written in Java. It is build using the 
-SpringFramework (http://www.springframework.org/).
-Apache Maven (http://maven.apache.org) is used as the build system.
+SpringFramework http://www.springframework.org/.
+Apache Maven http://maven.apache.org is used as the build system.
 
 == Building ==
 
@@ -15,14 +15,14 @@ mvn package
 
 This will create a WAR file in the target folder with the name "amenity-editor.war".
 Place this file in the webapps folder of your 
-servlet container (http://tomcat.apache.org) and launch the server.
+servlet container http://tomcat.apache.org and launch the server.
 
 You can then access the amenity editor with
 
 http://localhost:8080/amenity-editor
 
 The default profile will build an Amenity Editor which will use a H2 
-In-Memory Database (http://www.h2database.com) and access the Developer OSM API. 
+In-Memory Database http://www.h2database.com and access the Developer OSM API. 
 The database will be cleared after each restart.
 
 If you want to download some nodes, you will have to change the 
@@ -36,7 +36,7 @@ be able to download nodes from the OSM server and see them on the map.
 If you want to be able to edit nodes, you will have to register an OAuth App on the OSM webpage 
 (http://www.openstreetmap.org/user/&lt;username&gt;/oauth_clients/new).
 Then create a new profile in you Maven settings.xml like this:
-
+<nowiki>
 &lt;profile&gt;
 	&lt;id&gt;osm-oauth&lt;/id&gt;
 	&lt;properties&gt;
@@ -44,7 +44,7 @@ Then create a new profile in you Maven settings.xml like this:
 		&lt;oauth.consumerSecret&gt;...&lt;/oauth.consumerSecret&gt;
 	&lt;/properties&gt;
 &lt;/profile&gt;
-
+</nowiki>
 Now build the project with the osm-prd profile and the osm-oauth profile:
 
 mvn package -P osm-prd,osm-oauth
