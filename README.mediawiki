@@ -34,16 +34,16 @@ This will create a WAR file which can access the production API. This means that
 be able to download nodes from the OSM server and see them on the map.
 
 If you want to be able to edit nodes, you will have to register an OAuth App on the OSM webpage 
-(http://www.openstreetmap.org/user/<username>/oauth_clients/new).
+(http://www.openstreetmap.org/user/&gt;username&gt;/oauth_clients/new).
 Then create a new profile in you Maven settings.xml like this:
 
-<profile>
-	<id>osm-oauth</id>
-	<properties>
-		<oauth.consumerKey>...</oauth.consumerKey>
-		<oauth.consumerSecret>...</oauth.consumerSecret>
-	</properties>
-</profile>
+&gt;profile&gt;
+	&gt;id&gt;osm-oauth&gt;/id&gt;
+	&gt;properties&gt;
+		&gt;oauth.consumerKey&gt;...&gt;/oauth.consumerKey&gt;
+		&gt;oauth.consumerSecret&gt;...&gt;/oauth.consumerSecret&gt;
+	&gt;/properties&gt;
+&gt;/profile&gt;
 
 Now build the project with the osm-prd profile and the osm-oauth profile:
 
@@ -54,22 +54,22 @@ and create a schema from the src/main/resources/database.sql file.
 
 Here is an example for PostgreSQL:
 
-<profile>
-	<id>ae-postgresql</id>
-	<properties>
-		<db.driver>org.postgresql.Driver</db.driver>
-		<db.url>jdbc:postgresql://localhost/ae</db.url>
-		<db.user>osm</db.user>
-		<db.password>osm</db.password>
-	</properties>
-	<dependencies>
-		<dependency>
-			<groupId>postgresql</groupId>
-			<artifactId>postgresql</artifactId>
-			<version>8.4-702.jdbc4</version>
-		</dependency>
-	</dependencies>
-</profile>
+&gt;profile&gt;
+	&gt;id&gt;ae-postgresql&gt;/id&gt;
+	&gt;properties&gt;
+		&gt;db.driver&gt;org.postgresql.Driver&gt;/db.driver&gt;
+		&gt;db.url&gt;jdbc:postgresql://localhost/ae&gt;/db.url&gt;
+		&gt;db.user&gt;osm&gt;/db.user&gt;
+		&gt;db.password&gt;osm&gt;/db.password&gt;
+	&gt;/properties&gt;
+	&gt;dependencies&gt;
+		&gt;dependency&gt;
+			&gt;groupId&gt;postgresql&gt;/groupId&gt;
+			&gt;artifactId&gt;postgresql&gt;/artifactId&gt;
+			&gt;version&gt;8.4-702.jdbc4&gt;/version&gt;
+		&gt;/dependency&gt;
+	&gt;/dependencies&gt;
+&gt;/profile&gt;
 
 Now build the project with:
 
