@@ -25,11 +25,6 @@ public class KeyValueFilter {
 	private String valuePattern;
 	private Pattern pattern;
 
-	/**
-	 * @param key
-	 * @param valuePattern
-	 * @param pattern
-	 */
 	public KeyValueFilter(String key, String valuePattern) {
 		super();
 		this.key = key;

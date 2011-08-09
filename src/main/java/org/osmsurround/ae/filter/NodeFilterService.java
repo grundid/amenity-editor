@@ -25,19 +25,18 @@ import java.util.Set;
 import org.osmsurround.ae.entity.Amenity;
 import org.springframework.stereotype.Service;
 
-
 @Service
 public class NodeFilterService {
 
 	public static final Set<String> ignoreTags = new HashSet<String>();
 
 	/**
-	 * Knoten mit diesen Tags sollen nicht angezeigt werden
+	 * Nodes with these tags must not be displayed.
 	 */
 	public static final Set<String> blockerTags = new HashSet<String>();
 
 	/**
-	 * Knoten, die nur aus diesen Tags bestehen sollen nicht angezeigt werden.
+	 * Nodes which contains ONLY these tags should not be displayed.
 	 */
 	public static final Set<String> stopperTags = new HashSet<String>();
 
@@ -71,7 +70,7 @@ public class NodeFilterService {
 			if (stopperTags.contains(key))
 				stopperCount++;
 		}
-		// nur dann true, wenn nicht nur stopper tags enthalten sind
+		// return true, if the node does not only contain stopper tags
 		return stopperCount != tags.size();
 	}
 
