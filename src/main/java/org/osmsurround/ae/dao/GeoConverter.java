@@ -19,7 +19,7 @@ package org.osmsurround.ae.dao;
 
 public abstract class GeoConverter {
 
-	private static final double DB_FACTOR = 1000000;
+	private static final double DB_FACTOR = 10000000;
 
 	public static long toDb(double value) {
 		return Math.round(value * DB_FACTOR);
