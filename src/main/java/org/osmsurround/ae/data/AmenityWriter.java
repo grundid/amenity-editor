@@ -22,7 +22,6 @@ import java.util.concurrent.BlockingQueue;
 import org.osmsurround.ae.dao.InternalDataService;
 import org.osmsurround.ae.entity.Amenity;
 
-
 public class AmenityWriter implements Runnable {
 
 	private BlockingQueue<Amenity> amenities;
@@ -56,8 +55,8 @@ public class AmenityWriter implements Runnable {
 		}
 	}
 
-	public void setFinishWhenDone(boolean finishWhenDone) {
-		this.finishWhenDone = finishWhenDone;
+	public void parseFinished() {
+		this.finishWhenDone = true;
 	}
 
 	public int getAmenityCount() {

@@ -33,7 +33,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.xml.sax.SAXException;
 
-
 @Service
 public class ImportService {
 
@@ -57,7 +56,7 @@ public class ImportService {
 		OsmReader osmReader = new OsmReader(amenities);
 		parser.parse(is, osmReader);
 
-		amenityWriter.setFinishWhenDone(true);
+		amenityWriter.parseFinished();
 
 		log.info("Time needed: " + (System.currentTimeMillis() - time) / (1000 * 60) + " min, Amenities read: "
 				+ osmReader.getAmenityCount() + " written: " + amenityWriter.getAmenityCount());
