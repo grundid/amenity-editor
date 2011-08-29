@@ -57,7 +57,7 @@
 			<id>ae-postgresql</id>
 			<properties>
 				<db.driver>org.postgresql.Driver</db.driver>
-				<db.url>jdbc:postgresql://ubuntu-vmware/ae2</db.url>
+				<db.url>jdbc:postgresql://localhost/ae</db.url>
 				<db.user>osm</db.user>
 				<db.password>osm</db.password>
 			</properties>
