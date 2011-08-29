@@ -23,7 +23,7 @@ INSERT INTO keyvalues (k,v,valuecount) VALUES ('key_b', 'value_a', 30);
 INSERT INTO keyvalues (k,v,valuecount) VALUES ('key_b', 'value_b', 40);
 INSERT INTO keyvalues (k,v,valuecount) VALUES ('key_b', 'other_value', 50);
 
-INSERT INTO nodes (node_id,version,lat,lon) VALUES (1,1,49000000, 9000000);
+INSERT INTO nodes (node_id,version,lat,lon) VALUES (1,1,490000000, 90000000);
 INSERT INTO node_tags (node_id,k,v) VALUES (1,'amenity', 'restaurant');
 INSERT INTO node_tags (node_id,k,v) VALUES (1,'name', 'Restaurant NE');
 

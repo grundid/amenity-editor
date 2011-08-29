@@ -6,9 +6,7 @@ import org.junit.Test;
 import org.osmsurround.ae.TestBase;
 import org.osmsurround.ae.filter.FilterSet;
 import org.osmsurround.ae.osm.BoundingBox;
-import org.osmsurround.ae.search.SearchService;
 import org.springframework.beans.factory.annotation.Autowired;
-
 
 public class SearchServiceTest extends TestBase {
 

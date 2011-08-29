@@ -8,8 +8,6 @@ import org.junit.Before;
 import org.junit.Test;
 import org.osmsurround.ae.TestBase;
 import org.osmsurround.ae.entity.Amenity;
-import org.osmsurround.ae.osm.BoundingBox;
-import org.osmsurround.ae.osm.OsmUpdateService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.ClassPathResource;
@@ -20,7 +18,6 @@ import org.springframework.social.test.client.MockRestServiceServer;
 import org.springframework.social.test.client.RequestMatchers;
 import org.springframework.social.test.client.ResponseCreators;
 import org.springframework.web.client.RestTemplate;
-
 
 public class OsmServerUpdateServiceTest extends TestBase {
 
@@ -46,7 +43,7 @@ public class OsmServerUpdateServiceTest extends TestBase {
 				.expect(RequestMatchers.requestTo(osmApiBaseUrl + "/api/0.6/map?bbox=9.15,49.27,9.19,49.3"))
 				.andExpect(RequestMatchers.method(HttpMethod.GET))
 				.andRespond(
-						ResponseCreators.withResponse(new ClassPathResource("/map.osm", getClass()), responseHeaders));
+						ResponseCreators.withResponse(new ClassPathResource("/bbox.xml", getClass()), responseHeaders));
 
 		BoundingBox boundingBox = new BoundingBox();
 		boundingBox.setWest(9.15);
