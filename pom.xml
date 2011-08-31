@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.osmsurround</groupId>
 	<artifactId>amenity-editor</artifactId>
 	<name>amenity-editor</name>
 	<packaging>war</packaging>
-	<version>0.82</version>
+	<version>0.82-SNAPSHOT</version>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java-version>1.6</java-version>
@@ -19,8 +20,8 @@
 		<db.password>sa</db.password>
 
 		<oauth.callbackUrl>http://localhost:8080/amenity-editor/ae/oauth</oauth.callbackUrl>
-		<oauth.consumerKey />
-		<oauth.consumerSecret />
+		<oauth.consumerKey></oauth.consumerKey>
+		<oauth.consumerSecret></oauth.consumerSecret>
 
 		<osm.api.base.url>http://api06.dev.openstreetmap.org</osm.api.base.url>
 		<oauth.requestTokenEndpointUrl>http://api06.dev.openstreetmap.org/oauth/request_token</oauth.requestTokenEndpointUrl>
