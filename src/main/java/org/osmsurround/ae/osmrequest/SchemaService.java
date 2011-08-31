@@ -22,6 +22,7 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 
+import org.osm.schema.OsmRoot;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -29,7 +30,7 @@ public class SchemaService {
 
 	public Unmarshaller createOsmUnmarshaller() {
 		try {
-			return JAXBContext.newInstance("de.emaitie.osm.xsd.osm").createUnmarshaller();
+			return JAXBContext.newInstance(OsmRoot.class).createUnmarshaller();
 		}
 		catch (JAXBException e) {
 			throw new RuntimeException(e);
@@ -38,7 +39,7 @@ public class SchemaService {
 
 	public Marshaller createOsmMarshaller() {
 		try {
-			return JAXBContext.newInstance("de.emaitie.osm.xsd.osm").createMarshaller();
+			return JAXBContext.newInstance(OsmRoot.class).createMarshaller();
 		}
 		catch (JAXBException e) {
 			throw new RuntimeException(e);
