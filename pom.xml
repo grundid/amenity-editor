@@ -260,6 +260,8 @@
 				<artifactId>maven-release-plugin</artifactId>
 				<configuration>
 					<allowTimestampedSnapshots>true</allowTimestampedSnapshots>
+					<goals>package</goals>
+					<useReleaseProfile>false</useReleaseProfile>
 				</configuration>
 			</plugin>
 			<plugin>
