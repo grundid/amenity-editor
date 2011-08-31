@@ -234,7 +234,7 @@
 	</repositories>
 
 	<scm>
-		<developerConnection>scm:git:git@github/grundid/amenity-editor.git</developerConnection>
+		<developerConnection>scm:git:git@github.com/grundid/amenity-editor.git</developerConnection>
 	</scm>
 	<build>
 	
