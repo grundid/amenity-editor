@@ -233,7 +233,7 @@
 	</repositories>
 
 	<scm>
-		<developerConnection>scm:git:ssh://git@github/grundid/amenity-editor.git</developerConnection>
+		<developerConnection>scm:git:ssh://git@github.com/grundid/amenity-editor.git</developerConnection>
 	</scm>
 	<build>
 	
