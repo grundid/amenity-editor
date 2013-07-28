@@ -232,6 +232,16 @@
 		</repository>
 	</repositories>
 
+	<distributionManagement>
+		<repository>
+			<id>maven.grundid.de</id>
+			<url>scp://maven.grundid.de/repo/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>maven.grundid.de</id>
+			<url>scp://maven.grundid.de/repo/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
 	<scm>
 		<developerConnection>scm:git:ssh://git@github.com/grundid/amenity-editor.git</developerConnection>
 	</scm>
