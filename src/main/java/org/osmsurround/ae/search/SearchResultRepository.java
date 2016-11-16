@@ -17,18 +17,17 @@
  */
 package org.osmsurround.ae.search;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Types;
-import java.util.List;
-
-import javax.sql.DataSource;
-
 import org.osmsurround.ae.dao.GeoConverter;
 import org.osmsurround.ae.osm.BoundingBox;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.object.MappingSqlQuery;
 import org.springframework.stereotype.Repository;
+
+import javax.sql.DataSource;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Types;
+import java.util.List;
 
 
 @Repository
@@ -38,7 +37,7 @@ public class SearchResultRepository extends MappingSqlQuery<SearchResult> {
 			+ "FROM nodes AS n JOIN node_tags AS nt ON n.node_id = nt.node_id "
 			+ "WHERE n.lon <= ? AND n.lon >= ? AND n.lat <= ? AND n.lat >= ? ORDER BY n.node_id";
 
-	private final int[] types = { Types.INTEGER, Types.INTEGER, Types.INTEGER, Types.INTEGER };
+	private final int[] types = { Types.BIGINT, Types.BIGINT, Types.BIGINT, Types.BIGINT };
 
 	@Autowired
 	public SearchResultRepository(DataSource dataSource) {

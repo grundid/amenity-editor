@@ -17,15 +17,14 @@
  */
 package org.osmsurround.ae.dao;
 
-import java.sql.Types;
-import java.util.Map;
-
-import javax.sql.DataSource;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.SqlParameter;
 import org.springframework.jdbc.object.BatchSqlUpdate;
 import org.springframework.stereotype.Repository;
+
+import javax.sql.DataSource;
+import java.sql.Types;
+import java.util.Map;
 
 @Repository
 public class NodeTagInsert extends BatchSqlUpdate {
@@ -34,7 +33,7 @@ public class NodeTagInsert extends BatchSqlUpdate {
 	public NodeTagInsert(DataSource dataSource) {
 		setDataSource(dataSource);
 		setSql("INSERT INTO node_tags (node_id, k, v) VALUES (?,?,?)");
-		declareParameter(new SqlParameter(Types.INTEGER));
+		declareParameter(new SqlParameter(Types.BIGINT));
 		declareParameter(new SqlParameter(Types.VARCHAR));
 		declareParameter(new SqlParameter(Types.VARCHAR));
 	}

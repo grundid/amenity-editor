@@ -17,15 +17,14 @@
  */
 package org.osmsurround.ae.dao;
 
-import java.sql.Types;
-
-import javax.sql.DataSource;
-
 import org.osmsurround.ae.entity.Amenity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.SqlParameter;
 import org.springframework.jdbc.object.SqlUpdate;
 import org.springframework.stereotype.Repository;
+
+import javax.sql.DataSource;
+import java.sql.Types;
 
 
 @Repository
@@ -35,10 +34,10 @@ public class NodeUpdate extends SqlUpdate {
 	public NodeUpdate(DataSource dataSource) {
 		setDataSource(dataSource);
 		setSql("UPDATE nodes SET version=?, lon=?, lat=? WHERE node_id=?");
-		declareParameter(new SqlParameter(Types.INTEGER));
-		declareParameter(new SqlParameter(Types.INTEGER));
-		declareParameter(new SqlParameter(Types.INTEGER));
-		declareParameter(new SqlParameter(Types.INTEGER));
+		declareParameter(new SqlParameter(Types.BIGINT));
+		declareParameter(new SqlParameter(Types.BIGINT));
+		declareParameter(new SqlParameter(Types.BIGINT));
+		declareParameter(new SqlParameter(Types.BIGINT));
 	}
 
 	public void updateNode(Amenity node) {

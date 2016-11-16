@@ -17,14 +17,13 @@
  */
 package org.osmsurround.ae.dao;
 
-import java.sql.Types;
-
-import javax.sql.DataSource;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.SqlParameter;
 import org.springframework.jdbc.object.SqlUpdate;
 import org.springframework.stereotype.Repository;
+
+import javax.sql.DataSource;
+import java.sql.Types;
 
 @Repository
 public class NodeTagDelete extends SqlUpdate {
@@ -33,7 +32,7 @@ public class NodeTagDelete extends SqlUpdate {
 	public NodeTagDelete(DataSource dataSource) {
 		setDataSource(dataSource);
 		setSql("DELETE FROM node_tags WHERE node_id = ?");
-		declareParameter(new SqlParameter(Types.INTEGER));
+		declareParameter(new SqlParameter(Types.BIGINT));
 	}
 
 	public void delete(long nodeId) {
