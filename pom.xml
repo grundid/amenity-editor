@@ -19,8 +19,8 @@
 		<db.password>sa</db.password>
 
 		<oauth.callbackUrl>http://localhost:8080/amenity-editor/ae/oauth</oauth.callbackUrl>
-		<oauth.consumerKey />
-		<oauth.consumerSecret />
+		<oauth.consumerKey/>
+		<oauth.consumerSecret/>
 
 		<osm.api.base.url>http://api06.dev.openstreetmap.org</osm.api.base.url>
 		<oauth.requestTokenEndpointUrl>http://api06.dev.openstreetmap.org/oauth/request_token</oauth.requestTokenEndpointUrl>
@@ -164,7 +164,7 @@
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
-			<version>4.0.3</version>
+			<version>4.3.4</version>
 		</dependency>
 		<dependency>
 			<groupId>cglib</groupId>
