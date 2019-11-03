@@ -26,7 +26,6 @@
 		<oauth.requestTokenEndpointUrl>http://api06.dev.openstreetmap.org/oauth/request_token</oauth.requestTokenEndpointUrl>
 		<oauth.accessTokenEndpointUrl>http://api06.dev.openstreetmap.org/oauth/access_token</oauth.accessTokenEndpointUrl>
 		<oauth.authorizeWebsiteUrl>http://api06.dev.openstreetmap.org/oauth/authorize</oauth.authorizeWebsiteUrl>
-
 	</properties>
 	<profiles>
 		<profile>
@@ -93,7 +92,6 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-
 		<!-- Logging -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -133,7 +131,6 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-
 		<!-- Servlet -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -152,7 +149,6 @@
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
-
 		<!-- Test -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -160,7 +156,6 @@
 			<version>4.8.2</version>
 			<scope>test</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
@@ -231,7 +226,6 @@
 			</snapshots>
 		</repository>
 	</repositories>
-
 	<distributionManagement>
 		<repository>
 			<id>maven.grundid.de</id>
@@ -246,7 +240,6 @@
 		<developerConnection>scm:git:ssh://git@github.com/grundid/amenity-editor.git</developerConnection>
 	</scm>
 	<build>
-	
 		<extensions>
 			<extension>
 				<groupId>org.apache.maven.wagon</groupId>
@@ -295,7 +288,6 @@
 					<schemaDirectory>src/main/schema</schemaDirectory>
 				</configuration>
 			</plugin>
-
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
