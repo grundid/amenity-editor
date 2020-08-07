@@ -1,7 +1,6 @@
 == Amenity Editor for OSM ==
 
-This project contains the source code for the Amenity Editor 
-which is available online at http://ae.osmsurround.org.
+This project is no longer maintained.
 
 The Amenity Editor is written in Java. It is build using the 
 SpringFramework http://www.springframework.org/.
